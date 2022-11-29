@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>About Me</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="style.css">
+</head>
+
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="a-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="a-col-2">
+                    <h1 class="sb-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam non dolore nihil, inventore neque,
+                        tenetur unde ipsam repellendus sunt, sed ea illum
+                        cumque dignissimos tempora vel? Ex itaque consequuntur
+                        distinctio?
+                    </p>
+                    <div class="tab">
+                        <p class="tab-links active-links " onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents actv-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end</span><br>Desinging WebSite</li>
+                            <li><span>Ui/Ux</span><br>Desinging Interface</li>
+                            <li><span>App Dev</span><br>Desinging Web App</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Front-end</span><br>Desinging WebSite</li>
+                            <li><span>Ui/Ux</span><br>Desinging Interface</li>
+                            <li><span>App Dev</span><br>Desinging Web App</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>High School(SSC)</span><br>Pabna Govt Girls High School</li>
+                            <li><span>College(HSC)</span><br>Pabna Woman College</li>
+                            <li><span>University(BSC)</span><br>BSC on CSE Under Rajsahi University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-links");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("actv-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("actv-tab");
+        }
+    </script>
+</body>
+
+</html>

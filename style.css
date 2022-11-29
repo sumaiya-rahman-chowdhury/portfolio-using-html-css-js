@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(223, 211, 190);
+    color: #fff;
+}  
+#header{
+    width: 100%;
+    height: 100vh;
+ background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    position: relative;
+}
+#hd_line{
+    color: black;
+}
+nav ul li a:hover::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: chocolate;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 2vw;
+}
+.header-text h1{
+    font-size:6vw;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: yellow;
+}
+/*-------------about------------*/
+#about{
+    padding: 80px 0;
+    color: rgb(19, 1, 19);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+}
+.a-col-1{
+    flex-basis: 35%;
+}
+.a-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.a-col-2{
+    flex-basis: 60%;
+}
+.sb-title{
+    font-size: 6vw;
+    font-weight: 600;  
+    color: black;
+}
+.tab{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 2vw;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: brown;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-links::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: brown;
+    font-weight: bold;
+  
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.actv-tab{
+    display: block;
+}
+
+
+
+
+
